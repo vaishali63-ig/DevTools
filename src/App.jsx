@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import NavBar from './components/NavBar'
-import {Routes,Route} from 'react-router'
+import {Routes,Route, Router} from 'react-router'
 import Tools from './pages/Tools'
+import JsonValidator from './pages/jsonValidator'
+import JsonParser from './pages/jsonParser'
 
 
 function App() {
@@ -12,6 +14,8 @@ function App() {
         <NavBar/>
         <Routes>
            <Route path='' element={<Tools/>}/>
+           <Route path='json-validator' element={<JsonValidator/>} />
+           <Route path='json-parser' element={<JsonParser/>}/>
         </Routes>
     </div>
   )
