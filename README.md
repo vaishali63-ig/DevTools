@@ -1,16 +1,39 @@
-# React + Vite
+# DevTools
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+DevTools is a project where I added 6 tools for developers. The idea is to make a simple portal that will simplify tasks for developers so that don't need to go on different websites for these tasks
 
-Currently, two official plugins are available:
+### Tools Added
+ 1. JSON Validator
+ 2. JSON Parser
+ 3. JWT Decoder
+ 4. URL Encoder / Decoder
+ 5. UUID Generator
+ 6. Color Code Converter
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Tech used
+ 1. React
+ 2. JavaScript
+ 3. Tailwind CSS
 
-## React Compiler
+### Run on your system
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+git clone https://github.com/vaishali63-ig/DevTools.git
+cd DevTools
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+Open the local link shown in your terminal.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Live Demo:** [Open DevTools](https://dev-tools-omega-jade.vercel.app/)
+
+Or copy the URL:
+
+```text
+https://dev-tools-omega-jade.vercel.app/
+```
+
+
+
+I made this project while learning and trying to build something useful. I will add more tools and improve it later.
