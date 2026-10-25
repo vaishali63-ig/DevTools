@@ -1,8 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const JsonParser = ()=>{
     const [jsonInput, setInput] = useState("")
     const [parseResponse,setResponse] = useState({message:"",status:"",output:""})
+    useEffect(()=>{
+        if(parseResponse!=""){
+            window.scrollTo({
+            top:document.documentElement.scrollHeight,
+            behavior: "smooth"
+        })
+        }
+    },[parseResponse])
     const parseJson = ()=>{
         try{
             let resjson = JSON.parse(jsonInput);
@@ -11,11 +19,12 @@ const JsonParser = ()=>{
         }catch(err){
             setResponse({message:`${err}`,status:"failed",output:""})
         }
+        
     }
     return (
         <div className="roubded-lg p-4 shadow-lg mt-4">
             <p className="text-lg font-semibold">Json Parser</p>
-            <textarea value={jsonInput} onChange={(e)=>{setInput(e.target.value)}} name="text-paarser" id="text-parser" placeholder="Enter JSON-encoded string here" className="p-2 border border rounded-lg shadow-lg w-full mt-4 h-[22rem]"></textarea>
+            <textarea value={jsonInput} onChange={(e)=>{setInput(e.target.value); setResponse({message:"",status:"",output: []})}} name="text-paarser" id="text-parser" placeholder="Enter JSON-encoded string here" className="p-2 border border rounded-lg shadow-lg w-full mt-4 h-[22rem]"></textarea>
             <div className="flex justify-end gap-5 px-5">
                 <button onClick={()=>{setInput("")}} className="p-2 font-semibold border border-orange-400 rounded-lg cursor-pointer">Clear</button>
                 <button onClick={ parseJson} className="p-2 font-semibold text-white bg-orange-400 rounded-lg cursor-pointer">Parse</button>

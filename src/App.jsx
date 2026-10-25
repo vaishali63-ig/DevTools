@@ -4,6 +4,7 @@ import {Routes,Route, Router} from 'react-router'
 import Tools from './pages/Tools'
 import JsonValidator from './pages/jsonValidator'
 import JsonParser from './pages/jsonParser'
+import JwtDecoder from './pages/jwtDecoder'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
            <Route path='' element={<Tools/>}/>
            <Route path='json-validator' element={<JsonValidator/>} />
            <Route path='json-parser' element={<JsonParser/>}/>
+           <Route path='jwt-decoder' element={<JwtDecoder/>}/>
         </Routes>
     </div>
   )

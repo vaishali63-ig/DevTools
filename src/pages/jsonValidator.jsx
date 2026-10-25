@@ -1,8 +1,16 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 const JsonValidator = ()=>{
     const [jsonStr,setJson] = useState("")
     const [validateResponse,setReaponse] = useState({"status":"","message":""})
+     useEffect(()=>{
+            if(validateResponse!=""){
+                window.scrollTo({
+                top:document.documentElement.scrollHeight,
+                behavior: "smooth"
+            })
+            }
+        },[validateResponse])
     const validateJson = ()=>{
        try{
           JSON.parse(jsonStr);
